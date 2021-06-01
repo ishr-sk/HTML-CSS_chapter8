@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  margin: 50px auto;
+  width: 960px;
+}
+
+.list {
+  padding-bottom: 50px;
+}
+
+.list-item {
+  padding: 20px;
+  list-style: none;
+}
+
+.list-item:nth-child(odd) {
+  background-color: #dddddd;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box-item {
+  width: 30%;
+  height: 200px;
+  background-color: yellow;
+  margin-bottom: 40px;
+  margin-right: 5%;
+}
+
+.box-item:first-child,
+.box-item:nth-child(5),
+.box-item:last-child {
+  background-color: orange;
+}
+
+/* 全て３の倍数だからnth-child(3n)と置き換えることができる */
+.box-item:nth-child(3),
+.box-item:nth-child(6),
+.box-item:last-child {
+  margin-right: 0;
+}
+
+/* 最後から３個がだからnth-last-child(-n + 3)と置き換えることができる　*/
+.box-item:nth-child(7),
+.box-item:nth-child(8) .box-item:last-child {
+  margin-bottom: 0;
+}
